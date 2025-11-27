@@ -13,9 +13,3 @@ Eat food to increase score.
 Don’t hit the wall or your own tail.
 Just open index.html in your browser to play.
 
-  Running C++ Version.
-To run snake.cpp:
-Install CodeBlocks with MinGW compiler        [ https://www.codeblocks.org/downloads/binaries/#imagesoswindows48pnglogo-microsoft-windows ]  ,
-Create a new Console Application,
-Replace the main file with snake.cpp ,
-Press Build & Run.
