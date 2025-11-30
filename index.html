@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple Snake Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="theme-sky">
+    <div class="game-container">
+
+      <!-- LEFT SIDE PANEL -->
+      <div class="side-panel left">
+        <div class="user-name-display">
+          <span class="label">Player:</span>
+          <span id="displayName" class="value">Player</span>
+        </div>
+
+        <!-- Middle-left score area -->
+        <div class="left-middle">
+          <button id="highScoreBtn" class="chip">
+            High Score: <span id="highScore">0</span>
+          </button>
+          <button id="resetHighScoreBtn" class="icon-btn reset-icon">🔄</button>
+        </div>
+
+        <div class="score-box">
+          <div class="score-label">Current Score</div>
+          <div id="currentScore" class="score-value">0</div>
+        </div>
+      </div>
+
+      <!-- CENTER CANVAS -->
+      <div class="center-panel">
+        <div class="canvas-wrapper glass">
+          <canvas id="gameCanvas" width="600" height="600"></canvas>
+
+          <button id="startButton" class="overlay-btn">
+            Start Game
+          </button>
+        </div>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div class="side-panel right">
+
+        <!-- Settings button (top-right) -->
+        <div class="right-top">
+          <button id="settingsBtn" class="icon-btn" title="Settings">⚙️</button>
+        </div>
+
+        <!-- Bottom-right buttons -->
+        <div class="right-bottom">
+          <button id="pauseBtn" class="primary-btn">Pause</button>
+          <button id="restartBtn" class="primary-btn">Restart</button>
+          <button id="newGameBtn" class="secondary-btn">New Game</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SETTINGS MODAL -->
+    <div id="settingsModal" class="modal">
+      <div class="modal-content glass">
+
+        <h2 class="modal-title">Game Settings</h2>
+
+        <div class="form-group">
+          <label for="playerNameInput">Your Name</label>
+          <input type="text" id="playerNameInput" placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+          <label for="themeSelect">Theme</label>
+          <select id="themeSelect">
+            <option value="sky">Aesthetic Sky & Pink</option>
+            <option value="normal">Normal</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="speedSelect">Snake Speed</label>
+          <select id="speedSelect">
+            <option value="160">Slow</option>
+            <option value="120" selected>Medium</option>
+            <option value="80">Fast</option>
+          </select>
+        </div>
+
+        <div class="modal-actions">
+          <button id="saveSettingsBtn" class="primary-btn">
+            Save & Continue
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
